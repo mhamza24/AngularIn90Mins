@@ -1,0 +1,20 @@
+<!-- <p>todos works!</p>
+<p>
+    {{todoItems()[2].title}}
+</p> -->
+
+<h1>Todo List</h1>
+<h3 *ngIf="!todoItems().length">Loading...</h3>
+
+<label>Filter Todos</label>
+<input name="searchTerm" [(ngModel)]="searchTerm" placeholder="Search todos ..."/>
+<ul class="todo">
+    @for(todo of todoItems() |filerTodo:searchTerm() ;track todo.id){
+        <!-- <br>
+        <li class="todo__item"> {{todo.id}} 
+            <input id= "todo-{{todo.id}}"  type="checkbox" [value]="todo.completed"/>
+           <label for="todo-{{todo.id}}"> {{todo.title}} , {{todo.userId}}</label>
+        </li> -->
+        <app-todos-list (todoToggeled)="updateTodoToggeled($event)" [todo]="todo"/>
+    }
+</ul>
