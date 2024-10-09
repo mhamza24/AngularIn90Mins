@@ -1,5 +1,7 @@
 # AngularIn90Mins
 
+A simple To-Do app built with Angular, demonstrating concepts like HTTP handling, components, pipes, directives, services, dependency injection, parent-child data communication, and SCSS integration
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.3.
 
 ## Development server
